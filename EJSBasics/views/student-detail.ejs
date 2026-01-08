@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/style.css" />
+<%- include("partials/header", { title, activePage }) %>
+<div class="container" id="stu-details">
+  <h1><%= title %></h1>
+  <% if (!student) { %>
+  <p>❌ Student not found.</p>
+  <p><a href="/students">Back to list</a></p>
+  <% } else { %>
+  <div class="stu-info">
+    <h2><%= student.name %></h2>
+    <p><strong>ID:</strong> <%= student.id %></p>
+    <p><strong>Major:</strong> <%= student.major %></p>
+  </div>
+  <p id="back"><a href="/students">Back to list</a></p>
+</div>
+
+<% } %> <%- include("partials/footer") %>

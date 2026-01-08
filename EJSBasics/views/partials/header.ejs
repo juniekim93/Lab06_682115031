@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="content">
+    <div>
+        <nav>
+ <a href="/" class="<%= activePage === 'home' ? 'active' : '' %>">Home</a> |
+ <a href="/syntax" class="<%= activePage === 'syntax' ? 'active' : '' %>">Syntax</a> |
+ <a href="/students" class="<%= activePage === 'students' ? 'active' : '' %>">Student</a>
+    </nav>
+        </div>

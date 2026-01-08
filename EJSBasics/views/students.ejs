@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/style.css" />
+
+<%- include("partials/header", { title, activePage }) %>
+<div class="container" id="stu">
+  <h1><%= title %></h1>
+  <ul>
+    <% students.forEach(s => { %>
+    <li>
+      <a href="/students/<%= s.id %>"><%= s.name %></a>
+      - <%= s.major %>
+    </li>
+    <% }) %>
+  </ul>
+</div>
+<%- include("partials/footer") %>
